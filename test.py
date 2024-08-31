@@ -1,3 +1,3 @@
 ##test
-streverse='Malayalam'
-print(streverse[:-1])
+streverse='malayalam'
+print(streverse[::-1])
