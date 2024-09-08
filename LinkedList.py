@@ -10,7 +10,7 @@ class LinkedList:
     def insert_at_begining(self, data):
         node = Node(data, self.head)
         self.head = node
-        return self.head
+
 
     def print(self):
         if self.head is None:
@@ -48,6 +48,14 @@ class LinkedList:
         self.head=None
         for data in datalist:
             self.insert_at_end(data)
+    def get_length(self):
+        count=0
+        itr=self.head
+        while itr:
+            count = count + 1
+            itr=itr.next
+        return  count
+
 
 if __name__ == '__main__':
     ll = LinkedList()
@@ -57,5 +65,6 @@ if __name__ == '__main__':
     #ll.insert_at_end(100)
     ll.insert_values(["Apple","Orange","Banana"])
     ll.print()
+    print("Length of string:",ll.get_length())
     positions = ll.get_positions()
     print(positions)
